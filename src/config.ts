@@ -47,9 +47,9 @@ export const navBarConfig: NavBarConfig = {
 }
 
 export const profileConfig: ProfileConfig = {
-  avatar: 'assets/images/pic_chill.jpeg',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+  avatar: 'assets/images/profile_chill.jpeg',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
   name: 'Giampiero FC',
-  bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  bio: '👨‍💻 FullStack Developer 📚 Self-taught 🧠 Continuous Learning',
   links: [
     {
       name: 'Linkedin',
@@ -59,7 +59,7 @@ export const profileConfig: ProfileConfig = {
     {
       name: 'GitHub',
       icon: 'fa6-brands:github',
-      url: 'https://github.com/saicaca/fuwari',
+      url: 'https://github.com/GiampieroFC',
     },
     {
       name: 'Instagram',

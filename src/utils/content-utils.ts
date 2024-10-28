@@ -7,8 +7,8 @@ export async function getSortedPosts(): Promise<
   { body: string; data: BlogPostData; slug: string }[]
 > {
   const allBlogPosts = (await getCollection('posts', ({ data }) => {
-    // return import.meta.env.PROD ? data.draft !== true : true
-    return data.draft !== true
+    return import.meta.env.PROD ? data.draft !== true : true
+    // return data.draft !== true
   })) as unknown as { body: string; data: BlogPostData; slug: string }[]
 
   const sorted = allBlogPosts.sort(
@@ -38,8 +38,8 @@ export type Tag = {
 
 export async function getTagList(): Promise<Tag[]> {
   const allBlogPosts = await getCollection<'posts'>('posts', ({ data }) => {
-    // return import.meta.env.PROD ? data.draft !== true : true
-    return data.draft !== true
+    return import.meta.env.PROD ? data.draft !== true : true
+    // return data.draft !== true
   })
 
   const countMap: { [key: string]: number } = {}
@@ -65,8 +65,8 @@ export type Category = {
 
 export async function getCategoryList(): Promise<Category[]> {
   const allBlogPosts = await getCollection<'posts'>('posts', ({ data }) => {
-    // return import.meta.env.PROD ? data.draft !== true : true
-    return data.draft !== true
+    return import.meta.env.PROD ? data.draft !== true : true
+    // return data.draft !== true
   })
   const count: { [key: string]: number } = {}
   allBlogPosts.map((post: { data: { category: string | number } }) => {
